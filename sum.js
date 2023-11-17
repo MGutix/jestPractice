@@ -27,4 +27,21 @@ export const calculator = {
   },
 }
 
+export function caesar(string, shiftNum) {
+  let arr = string.split('')
+  let regex = /\w+/
 
+  let result =  arr.map((character) =>{
+    if (regex.test(character)) {
+      let code = character.charCodeAt(0)
+      if(code>(122-shiftNum)){
+        let dif = code + shiftNum - 123
+        return String.fromCharCode(97 + dif)
+      }
+      return String.fromCharCode(code + shiftNum)
+    }
+    return character
+  })
+
+  return result.join('')
+}

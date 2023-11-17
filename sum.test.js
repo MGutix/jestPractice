@@ -1,4 +1,4 @@
-import { calculator, sum, capitalize, reverseString } from './sum';
+import { calculator, sum, capitalize, reverseString, caesar } from './sum';
 
 
 test('adds 1 + 2 to equal 3', () => {
@@ -24,5 +24,9 @@ test('1 / 4', () =>{
 })
 test('1 * 4', () =>{
   expect(calculator.multiply(1,4)).toBe(4)
+})
+
+test ('Hello, world!', () => {
+  expect(caesar('Hello, world!',5)).toBe('Mjqqt, btwqi!')
 })
 
