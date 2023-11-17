@@ -1,4 +1,4 @@
-import { calculator, sum, capitalize, reverseString, caesar } from './sum';
+import { calculator, sum, capitalize, reverseString, caesar, analyzeArray } from './sum';
 
 
 test('adds 1 + 2 to equal 3', () => {
@@ -30,3 +30,6 @@ test ('Hello, world!', () => {
   expect(caesar('Hello, world!',5)).toBe('Mjqqt, btwqi!')
 })
 
+test('1,8,3,4,2,6 object', () => {
+  expect(analyzeArray([1,8,3,4,2,6])).toStrictEqual({average: 4, min: 1, max: 8, length: 6})
+})

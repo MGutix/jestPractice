@@ -45,3 +45,17 @@ export function caesar(string, shiftNum) {
 
   return result.join('')
 }
+
+
+export function analyzeArray(arr) {
+  let sortedArr = arr.sort((a, b)=> a-b)
+  let avr = arr.reduce((total, current) => total+=current)
+  const object = {
+    average: avr/arr.length,
+    min: sortedArr[0],
+    max: sortedArr[arr.length-1],
+    length: arr.length
+  }
+
+  return object
+}
